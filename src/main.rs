@@ -1,12 +1,14 @@
 #![allow(non_snake_case)]
 #![allow(dead_code)]
+#![allow(unused_variables)]
+#![allow(unused_imports)]
 use std::io;
 
 mod vect;
 use vect::Vect;
 mod output;
 mod pathtracer;
-
+extern crate rand;
 
 pub fn main() {
     println!("Hello world\n");

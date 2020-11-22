@@ -19,7 +19,7 @@ impl Vect {
         self.z += a.z;
     }
 
-    pub fn minus(&self, a: &Vect) -> Vect {
+    pub fn minus(&self, a: Vect) -> Vect {
         Vect::new(self.x - a.x, self.y - a.y, self.z - a.z)
     }
 
@@ -71,25 +71,3 @@ impl Vect {
         return (self.x*self.x + self.y*self.y + self.z*self.z).sqrt()
     }
 }
-/*
-trait Vect3D {
-    pub fn plus(&self, a: &Vect) -> Vect;
-    pub fn plusM(&mut self, a: &Vect);
-    pub fn minus(&self, a: &Vect) -> Vect;
-    pub fn minusM(&mut self, a: &Vect);
-    pub fn plusM(&mut self, a: &Vect);
-    pub fn times(self: &Vect, a: &Vect) -> Vect;
-    pub fn timesM(&mut self, a: &Vect);
-    pub fn plusAll(&self, a: f64) -> Vect;
-    pub fn plusAllM(&mut self, a: f64);
-    pub fn normalize(&self) -> Vect;
-    pub fn normalizeM(&mut self);
-    pub fn dot(&self, a: &Vect) -> f64;
-    pub fn length(&self) -> f64;
-
-}
-
-impl Vect3D for Vect {
-    
-}
-*/

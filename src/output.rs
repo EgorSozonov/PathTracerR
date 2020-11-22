@@ -17,7 +17,7 @@ pub fn createBMP(data: &[u8], w: usize, h: usize, fName: String) -> Result<(), E
         }
     }
     let mut bmpFileHeader: [u8; 14] = [ 66, 77, 0,0,0,0, 0,0,0,0, 54,0,0,0 ];
-    bmpFileHeader[ 2] = (fileSize         & 0xff) as u8;
+    bmpFileHeader[ 2] = ( fileSize        & 0xff) as u8;
     bmpFileHeader[ 3] = ((fileSize >>  8) & 0xff) as u8;
     bmpFileHeader[ 4] = ((fileSize >> 16) & 0xff) as u8;
     bmpFileHeader[ 5] = ((fileSize >> 24) & 0xff) as u8;   
