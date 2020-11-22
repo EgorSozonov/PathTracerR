@@ -2,11 +2,7 @@
 #![allow(dead_code)]
 use std::io;
 
-struct Vec {
-    x: f64,
-    y: f64,
-    z: f64,
-}
+
 
 pub fn main() {
     println!("Hello world\n");
