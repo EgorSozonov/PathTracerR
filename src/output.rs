@@ -2,7 +2,7 @@ use std::fs::File;
 use std::io::prelude::*;
 use std::io::Error;
 
-pub fn createBMP(data: &[u8], w: usize, h: usize, fName: String) -> Result<(), Error> {
+pub fn createBMP(data: Vec<u8>, w: usize, h: usize, fName: String) -> Result<(), Error> {
     let mut file = File::create(fName)?;
 
     let fileSize = 3*w*h + 54;

@@ -9,11 +9,11 @@ impl Vect {
         Vect { x: _x, y: _y, z: _z, }
     }
 
-    pub fn plus(&self, a: &Vect) -> Vect {
+    pub fn plus(&self, a: Vect) -> Vect {
         Vect::new(self.x + a.x, self.y + a.y, self.z + a.z)
     }
 
-    pub fn plusM(&mut self, a: &Vect) {
+    pub fn plusM(&mut self, a: Vect) {
         self.x += a.x;
         self.y += a.y;
         self.z += a.z;
@@ -33,10 +33,10 @@ impl Vect {
         Vect::new(self.x * a, self.y * a, self.z * a)
     }
 
-    pub fn timesM(&mut self, a: &Vect) {
-        self.x *= a.x;
-        self.y *= a.y;
-        self.z *= a.z;
+    pub fn timesM(&mut self, a: f64) {
+        self.x *= a;
+        self.y *= a;
+        self.z *= a;
     }
     
     pub fn plusAll(self, a: f64) -> Vect {
@@ -63,7 +63,7 @@ impl Vect {
         self.z /= len;
     }
 
-    pub fn dot(self, a: &Vect) -> f64 {
+    pub fn dot(self, a: Vect) -> f64 {
         return self.x*a.x + self.y*a.y + self.z*a.z
     }
 
